@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(-300deg, #000000, #000000, #272727);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /* background-color: #1C1C1C; */
+}
+
+.linkPerfil,
+p {
+    background: rgb(36,0,9);
+    background: linear-gradient(90deg, rgba(36,0,9,1) 0%, rgba(9,121,105,1) 0%, rgba(7,101,103,1) 78%, rgba(0,236,255,1) 100%);
+    color: black;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration: underline;
+}
+
+header {
+    text-align: center;
+    color: #fff;
+    animation: perfilanimation 2s ease-in-out;
+}
+
+.containerMain {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    animation: containerMainAnimation 2s ease-in-out;
+}
+
+.foto-perfil{
+    width: 250px;
+    height: 250px;
+    position: relative;
+    border-radius: 50%;
+}
+
+#div-instagram {
+    border-radius: 10px;
+    width: 250px;
+    height: 100px;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    animation: instagramAnimation 2s ease-in-out;
+}
+
+#div-instagram:hover,
+#div-github:hover,
+#div-linkedin:hover {
+    border: 2px solid #00DBFC;
+    opacity: 0.7;
+    box-shadow: 3px 3px 5px #00DBFC;
+}
+
+.icon-instagram,
+.icon-github,
+.icon-linkedin {
+    width: 30px;
+    padding-top: 10px;
+}
+
+h4 {
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+#div-github {
+    border-radius: 10px;
+    width: 250px;
+    height: 100px;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    background: linear-gradient(58deg, #1f9b95 8%, #3983b4 98%);
+    animation: githubAnimation 2s ease-in-out;
+}
+
+#div-linkedin {
+    border-radius: 10px;
+    width: 250px;
+    height: 100px;
+    text-align: center;
+    margin-top: 20px;
+    position: relative;
+    background: linear-gradient( 90deg, rgba(111, 139, 231, 1) 0%, rgba(47, 41, 157, 1) 100%);
+    animation: linkedinAnimation 2s ease-in-out;
+}
+
+.img-coffe {
+    width: 200px;
+    position: relative;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+p {
+    color: #00DBFC;
+    position: relative;
+    font-size: 18px;
+}
+
+/*animações*/
+
+@keyframes perfilanimation {
+    from {
+        transform: translateY(-110%);
+    }
+}
+
+@keyframes instagramAnimation {
+    from {
+        transform: translateY(-800%);
+    }
+}
+
+
+@keyframes githubAnimation {
+    from {
+        transform: translateY(-700%);
+    }
+}
+
+@keyframes linkedinAnimation {
+    from {
+        transform: translateY(-700%);
+    }
+}
+
+@media (max-width: 520px) {
+    * {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .containerMain {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    @keyframes perfilanimation {
+        from {
+            transform: translateY(-110%);
+        }
+    }
+    @keyframes instagramAnimation {
+        from {
+            transform: translateY(-800%);
+        }
+    }
+    @keyframes githubAnimation {
+        from {
+            transform: translateY(-600%);
+        }
+    }
+    @keyframes linkedinAnimation {
+        from {
+            transform: translateY(-500%);
+        }
+    }
+}
